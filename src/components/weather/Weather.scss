@@ -1,0 +1,48 @@
+section {
+  background: rgb(223, 10, 172);
+  background: linear-gradient(
+    135deg,
+    rgba(223, 10, 172, 1) 35%,
+    rgba(225, 21, 251, 1) 46%
+  );
+}
+
+.weather {
+  width: 100%;
+  max-width: 350px;
+  height: 80vh;
+  background: url(../../assets/weather-bg.png);
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.weather::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.weather-app {
+  z-index: 999;
+}
+
+.weather-app > *,
+.result > * {
+  color: #fff;
+}
+
+.result {
+  background: rgba(3, 150, 255, 0.4);
+}
+
+.error {
+  background: rgba(255, 0, 4, 0.3);
+  padding: 1rem;
+}
